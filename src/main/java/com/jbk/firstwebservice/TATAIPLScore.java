@@ -14,6 +14,8 @@ public class TATAIPLScore {
 	
 	@RequestMapping("matchdetails")
 	ArrayList<Match> detailsAboutMatches() {
+		
+		// this is for all matches
 	
 		ArrayList<Match> a1 = new ArrayList<Match> ();
 		
@@ -30,12 +32,14 @@ public class TATAIPLScore {
 	
 	}
 	
+	//this is post mapping
+	
 	@PostMapping("ticketbooking")
 	public void bookTicket(@RequestBody Ticket ticket ) {
 		System.out.println(ticket);
 	}
 	
-	
+	//this is get mapping
 	
 	@GetMapping("ticketbooking1/{Name}/{mobNumber}/{standName}/{Qty}")
 	public void bookTicket(@PathVariable String name ,@PathVariable String mobNumber,@PathVariable String standName,@PathVariable String Qty) {
